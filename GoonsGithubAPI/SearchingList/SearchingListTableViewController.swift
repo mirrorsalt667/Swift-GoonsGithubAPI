@@ -7,39 +7,66 @@
 
 import UIKit
 
-class SearchingListTableViewController: UITableViewController {
+final class SearchingListTableViewController: UITableViewController {
+    
+    struct State {
+        var results: [Items]
+    }
+    
+    var state = State(results: []) {
+        didSet {
+            if oldValue.results != state.results {
+                // reload
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    let fetcher = SourceFetcher()
 
+    // MARK: Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.title = "Repositories"
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        fetcher.fetchingData { results in
+            DispatchQueue.main.async {
+                self.state.results = results
+            }
+        }
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return state.results.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchingListTableViewCell", for: indexPath) as! SearchingListTableViewCell
+        let row = indexPath.row
+        if let url = URL(string: state.results[row].owner.avatar_url),
+           let data = try? Data(contentsOf: url),
+           let image = UIImage(data: data)
+        {
+            cell.iconImageView.image = image
+        } else {
+            cell.iconImageView.image = UIImage(systemName: "questionmark.app")
+        }
+        
+        cell.titleLabel.text = state.results[row].full_name
+        cell.descriptionLabel.text = state.results[row].description ?? ""
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
