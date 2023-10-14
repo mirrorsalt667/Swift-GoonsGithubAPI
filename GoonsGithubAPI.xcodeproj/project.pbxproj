@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7D3F12C2ADAC765004C0928 /* SearchingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D3F12B2ADAC765004C0928 /* SearchingListTableViewController.swift */; };
+		C7D3F12E2ADAC77D004C0928 /* SearchingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D3F12D2ADAC77D004C0928 /* SearchingList.storyboard */; };
+		C7D3F1312ADAC842004C0928 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D3F1302ADAC842004C0928 /* DetailedViewController.swift */; };
+		C7D3F1332ADAC851004C0928 /* Detailed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D3F1322ADAC851004C0928 /* Detailed.storyboard */; };
+		C7D3F1362ADAC8AC004C0928 /* SourceFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D3F1352ADAC8AC004C0928 /* SourceFetcher.swift */; };
 		C7E550822ADA379E0006F883 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E550812ADA379E0006F883 /* AppDelegate.swift */; };
 		C7E550842ADA379E0006F883 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E550832ADA379E0006F883 /* SceneDelegate.swift */; };
-		C7E550862ADA379E0006F883 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E550852ADA379E0006F883 /* ViewController.swift */; };
-		C7E550892ADA379E0006F883 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E550872ADA379E0006F883 /* Main.storyboard */; };
 		C7E5508B2ADA379F0006F883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7E5508A2ADA379F0006F883 /* Assets.xcassets */; };
 		C7E5508E2ADA379F0006F883 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E5508C2ADA379F0006F883 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7D3F12B2ADAC765004C0928 /* SearchingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingListTableViewController.swift; sourceTree = "<group>"; };
+		C7D3F12D2ADAC77D004C0928 /* SearchingList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchingList.storyboard; sourceTree = "<group>"; };
+		C7D3F1302ADAC842004C0928 /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
+		C7D3F1322ADAC851004C0928 /* Detailed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detailed.storyboard; sourceTree = "<group>"; };
+		C7D3F1352ADAC8AC004C0928 /* SourceFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceFetcher.swift; sourceTree = "<group>"; };
 		C7E5507E2ADA379E0006F883 /* GoonsGithubAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoonsGithubAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E550812ADA379E0006F883 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7E550832ADA379E0006F883 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C7E550852ADA379E0006F883 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C7E550882ADA379E0006F883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7E5508A2ADA379F0006F883 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7E5508D2ADA379F0006F883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7E5508F2ADA379F0006F883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +43,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7D3F1292ADAC6B1004C0928 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C7E550812ADA379E0006F883 /* AppDelegate.swift */,
+				C7E550832ADA379E0006F883 /* SceneDelegate.swift */,
+				C7E5508C2ADA379F0006F883 /* LaunchScreen.storyboard */,
+				C7E5508A2ADA379F0006F883 /* Assets.xcassets */,
+				C7E5508F2ADA379F0006F883 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C7D3F12A2ADAC70E004C0928 /* SearchingList */ = {
+			isa = PBXGroup;
+			children = (
+				C7D3F12B2ADAC765004C0928 /* SearchingListTableViewController.swift */,
+				C7D3F12D2ADAC77D004C0928 /* SearchingList.storyboard */,
+			);
+			path = SearchingList;
+			sourceTree = "<group>";
+		};
+		C7D3F12F2ADAC7BB004C0928 /* DetailedPage */ = {
+			isa = PBXGroup;
+			children = (
+				C7D3F1302ADAC842004C0928 /* DetailedViewController.swift */,
+				C7D3F1322ADAC851004C0928 /* Detailed.storyboard */,
+			);
+			path = DetailedPage;
+			sourceTree = "<group>";
+		};
+		C7D3F1342ADAC876004C0928 /* SourceFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				C7D3F1352ADAC8AC004C0928 /* SourceFetcher.swift */,
+			);
+			path = SourceFetcher;
+			sourceTree = "<group>";
+		};
 		C7E550752ADA379E0006F883 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +100,10 @@
 		C7E550802ADA379E0006F883 /* GoonsGithubAPI */ = {
 			isa = PBXGroup;
 			children = (
-				C7E550812ADA379E0006F883 /* AppDelegate.swift */,
-				C7E550832ADA379E0006F883 /* SceneDelegate.swift */,
-				C7E550852ADA379E0006F883 /* ViewController.swift */,
-				C7E550872ADA379E0006F883 /* Main.storyboard */,
-				C7E5508A2ADA379F0006F883 /* Assets.xcassets */,
-				C7E5508C2ADA379F0006F883 /* LaunchScreen.storyboard */,
-				C7E5508F2ADA379F0006F883 /* Info.plist */,
+				C7D3F1342ADAC876004C0928 /* SourceFetcher */,
+				C7D3F12F2ADAC7BB004C0928 /* DetailedPage */,
+				C7D3F12A2ADAC70E004C0928 /* SearchingList */,
+				C7D3F1292ADAC6B1004C0928 /* SupportingFiles */,
 			);
 			path = GoonsGithubAPI;
 			sourceTree = "<group>";
@@ -127,7 +168,8 @@
 			files = (
 				C7E5508E2ADA379F0006F883 /* LaunchScreen.storyboard in Resources */,
 				C7E5508B2ADA379F0006F883 /* Assets.xcassets in Resources */,
-				C7E550892ADA379E0006F883 /* Main.storyboard in Resources */,
+				C7D3F12E2ADAC77D004C0928 /* SearchingList.storyboard in Resources */,
+				C7D3F1332ADAC851004C0928 /* Detailed.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7E550862ADA379E0006F883 /* ViewController.swift in Sources */,
+				C7D3F12C2ADAC765004C0928 /* SearchingListTableViewController.swift in Sources */,
+				C7D3F1362ADAC8AC004C0928 /* SourceFetcher.swift in Sources */,
+				C7D3F1312ADAC842004C0928 /* DetailedViewController.swift in Sources */,
 				C7E550822ADA379E0006F883 /* AppDelegate.swift in Sources */,
 				C7E550842ADA379E0006F883 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C7E550872ADA379E0006F883 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C7E550882ADA379E0006F883 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C7E5508C2ADA379F0006F883 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,7 +252,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -295,6 +331,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +360,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
