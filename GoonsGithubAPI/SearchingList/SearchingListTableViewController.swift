@@ -107,7 +107,6 @@ extension SearchingListTableViewController: UISearchBarDelegate {
     
     /// 鍵盤按下搜尋
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("-> saerchBtnClick <-")
         self.view.endEditing(true)
         guard let text = searchBar.text,
               var urlComps = URLComponents(string: urlHeaderString)
@@ -123,10 +122,5 @@ extension SearchingListTableViewController: UISearchBarDelegate {
         if searchText == "" {
             self.state.results = []
         }
-    }
-    
-    /// 取消按鈕
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        print("-> cancelBtnClick <-")
     }
 }
