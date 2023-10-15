@@ -46,6 +46,8 @@ final class SearchingListTableViewController: UITableViewController {
 //            }
         }
     }
+    
+    @IBOutlet weak var topView: UIView!
 
     // MARK: Life Cycle
     
@@ -149,6 +151,8 @@ final class SearchingListTableViewController: UITableViewController {
                 results: self.state.results[indexPath.row],
                 imageModel: self.state.imageModel[indexPath.row]
             )
+            navigationController?.navigationBar.backgroundColor = .clear
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black]
             navigationController?.pushViewController(detailedViewController, animated: true)
         }
     }
@@ -179,6 +183,24 @@ extension SearchingListTableViewController: UISearchBarDelegate {
             self.state.results = []
             self.state.imageModel = []
             self.state.searchingUrl = nil
+        }
+    }
+}
+
+
+// MARK: Scroll View
+
+extension SearchingListTableViewController {
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let yOffset = scrollView.contentOffset.y
+        if let navi = navigationController?.navigationBar {
+            if yOffset >= -20 {
+                navi.backgroundColor = .black
+                navi.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+            } else {
+                navi.backgroundColor = .clear
+                navi.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black]
+            }
         }
     }
 }

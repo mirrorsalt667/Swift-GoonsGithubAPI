@@ -15,6 +15,7 @@
 		C7D3F1382ADACC28004C0928 /* SearchingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D3F1372ADACC28004C0928 /* SearchingListTableViewCell.swift */; };
 		C7D3F13A2ADAD1F5004C0928 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D3F1392ADAD1F5004C0928 /* DataModel.swift */; };
 		C7D3F13C2ADAF0A0004C0928 /* SearchingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D3F13B2ADAF0A0004C0928 /* SearchingListViewModel.swift */; };
+		C7D3F13E2ADBDA19004C0928 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D3F13D2ADBDA18004C0928 /* CustomNavigationController.swift */; };
 		C7E550822ADA379E0006F883 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E550812ADA379E0006F883 /* AppDelegate.swift */; };
 		C7E550842ADA379E0006F883 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E550832ADA379E0006F883 /* SceneDelegate.swift */; };
 		C7E5508B2ADA379F0006F883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7E5508A2ADA379F0006F883 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		C7D3F1372ADACC28004C0928 /* SearchingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingListTableViewCell.swift; sourceTree = "<group>"; };
 		C7D3F1392ADAD1F5004C0928 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		C7D3F13B2ADAF0A0004C0928 /* SearchingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingListViewModel.swift; sourceTree = "<group>"; };
+		C7D3F13D2ADBDA18004C0928 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		C7E5507E2ADA379E0006F883 /* GoonsGithubAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoonsGithubAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E550812ADA379E0006F883 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7E550832ADA379E0006F883 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				C7E5508F2ADA379F0006F883 /* Info.plist */,
 				C7E5508C2ADA379F0006F883 /* LaunchScreen.storyboard */,
 				C7E550832ADA379E0006F883 /* SceneDelegate.swift */,
+				C7D3F13D2ADBDA18004C0928 /* CustomNavigationController.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				C7D3F13A2ADAD1F5004C0928 /* DataModel.swift in Sources */,
 				C7D3F1382ADACC28004C0928 /* SearchingListTableViewCell.swift in Sources */,
 				C7D3F12C2ADAC765004C0928 /* SearchingListTableViewController.swift in Sources */,
+				C7D3F13E2ADBDA19004C0928 /* CustomNavigationController.swift in Sources */,
 				C7D3F13C2ADAF0A0004C0928 /* SearchingListViewModel.swift in Sources */,
 				C7D3F1362ADAC8AC004C0928 /* SourceFetcher.swift in Sources */,
 				C7D3F1312ADAC842004C0928 /* DetailedViewController.swift in Sources */,

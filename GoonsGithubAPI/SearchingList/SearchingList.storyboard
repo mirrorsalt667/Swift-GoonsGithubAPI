@@ -26,33 +26,33 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchingListTableViewCell" id="9Ga-1b-RIo" customClass="SearchingListTableViewCell" customModule="GoonsGithubAPI" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="94" width="393" height="84"/>
+                                <rect key="frame" x="0.0" y="94" width="393" height="86.666664123535156"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Ga-1b-RIo" id="13y-3C-A8i">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="84"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="86.666664123535156"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MAr-Q8-Suy">
-                                            <rect key="frame" x="25" y="14" width="343" height="56"/>
+                                            <rect key="frame" x="25" y="13.999999999999996" width="343" height="58.666666666666657"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AeJ-OZ-Wbl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="56"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="58.666666666666664"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="CMs-p3-fwK"/>
                                                         <constraint firstAttribute="width" constant="70" id="jxb-72-Ocu"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XkM-bs-LnI">
-                                                    <rect key="frame" x="90" y="0.0" width="253" height="56"/>
+                                                    <rect key="frame" x="90" y="0.0" width="253" height="58.666666666666664"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjL-vm-Fmp">
-                                                            <rect key="frame" x="0.0" y="0.0" width="253" height="33.666666666666664"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="253" height="36.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tAL-5z-Z02">
-                                                            <rect key="frame" x="0.0" y="38.666666666666664" width="48" height="17"/>
+                                                            <rect key="frame" x="0.0" y="41.333333333333336" width="48" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
@@ -88,13 +88,13 @@
             </objects>
             <point key="canvasLocation" x="1910.6870229007632" y="-2.1126760563380285"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Custom Navigation Controller-->
         <scene sceneID="BR5-0N-Pe7">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rGF-uE-foB" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rGF-uE-foB" customClass="CustomNavigationController" customModule="GoonsGithubAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="etD-zl-aDj">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="etD-zl-aDj">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
