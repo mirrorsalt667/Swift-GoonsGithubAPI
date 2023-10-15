@@ -29,13 +29,13 @@ final class SearchingListViewModel {
         }
     }
     
-//    func fetchImage(indexPathRow: Int, _ completion: @escaping (FetchResult<Data>) -> Void) {
-//        fetcher.fetchImage(at: items[indexPathRow].owner.avatar_url) { imageData in
-//            if case .success(_) = imageData {
-//                completion(imageData)
-//            }
-//        }
-//    }
+    func fetchImage(indexPathRow: Int, _ completion: @escaping (FetchResult<Data>) -> Void) {
+        fetcher.fetchImage(at: items[indexPathRow].owner.avatar_url) { imageData in
+            if case .success(_) = imageData {
+                completion(imageData)
+            }
+        }
+    }
 
     func select(index: Int, for data: [URL]) {
         delegate?.viewModel(self)

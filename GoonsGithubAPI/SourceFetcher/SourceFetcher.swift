@@ -14,7 +14,6 @@ enum FetchResult<Value> {
 
 class SourceFetcher {
     func fetchResults(at url: URL, completionHandler: @escaping (FetchResult<[Items]>) -> Void) {
-        print("取得資料")
         var request = URLRequest(url: url,timeoutInterval: Double.infinity)
         request.httpMethod = "GET"
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
