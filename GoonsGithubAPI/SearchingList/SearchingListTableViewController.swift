@@ -11,14 +11,16 @@ final class SearchingListTableViewController: UITableViewController {
     
     var viewModel = SearchingListViewModel()
     let urlHeaderString = "https://api.github.com/search/repositories"
+    let customRefreshControl = UIRefreshControl()
     
     struct State {
         var results: [Items]
         var imageModel: [ImageModel]
+        var searchingUrl: URL?
 //        var newLoadImage: ImageModel
     }
     
-    var state = State(results: [], imageModel: []) {
+    var state = State(results: [], imageModel: [], searchingUrl: nil) {
         didSet {
             if oldValue.results != state.results {
                 DispatchQueue.main.async {
@@ -28,6 +30,11 @@ final class SearchingListTableViewController: UITableViewController {
             if oldValue.imageModel != state.imageModel {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                }
+            }
+            if oldValue.searchingUrl != state.searchingUrl {
+                if let url = state.searchingUrl {
+                    self.fetchResults(url: url)
                 }
             }
 //            if oldValue.newLoadImage != state.newLoadImage {
@@ -47,21 +54,55 @@ final class SearchingListTableViewController: UITableViewController {
         self.title = "Repositories"
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.addSubview(customRefreshControl)
+        customRefreshControl.addTarget(self, action: #selector(refreshResults), for: .valueChanged)
     }
     
     // MARK: - Methods
     
+    /// 取得資料
     func fetchResults(url: URL) {
-        print("API網址：\(url)")
+        print("API網址-f：\(url)")
         viewModel.fetchResults(at: url) { [weak self] results in
             switch results {
             case .success(let items):
                 self?.state.results = items
                 // 創造一樣多的空位image array
                 self?.state.imageModel = Array(repeating: ImageModel(id: 0, imageData: Data()), count: items.count)
+                // 結束更新動畫
+                self?.endRefresh()
             case .failure(let error):
                 print("error: \(error.localizedDescription)")
             }
+        }
+    }
+    
+    /// 下拉更新
+    @objc func refreshResults() {
+        guard let url = state.searchingUrl else {
+            self.showAlert(title: "Oops!", msg: "The data couldn’t be read because it is missing.") { alert in
+                self.endRefresh()
+            }
+            return
+        }
+        print("下拉更新")
+        fetchResults(url: url)
+    }
+    
+    /// 結束下拉更新動畫
+    func endRefresh() {
+        DispatchQueue.main.async {
+            self.customRefreshControl.endRefreshing()
+        }
+    }
+    
+    /// 顯示警告提示框
+    func showAlert(title: String, msg: String, handler: ((UIAlertAction) -> Void)?) {
+        let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: handler)
+        alertController.addAction(okAction)
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true)
         }
     }
 
@@ -111,16 +152,21 @@ extension SearchingListTableViewController: UISearchBarDelegate {
         guard let text = searchBar.text,
               var urlComps = URLComponents(string: urlHeaderString)
         else { return }
-        urlComps.queryItems = [URLQueryItem(name: "q", value: text)]
-        
-        guard let url = urlComps.url else { return }
-        self.fetchResults(url: url)
+        // 是空白嗎
+        if !text.isEmpty {
+            urlComps.queryItems = [URLQueryItem(name: "q", value: text)]
+            
+            guard let url = urlComps.url else { return }
+            self.state.searchingUrl = url
+        }
     }
     
     /// 被清空時，清空table view
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText == "" {
             self.state.results = []
+            self.state.imageModel = []
+            self.state.searchingUrl = nil
         }
     }
 }
