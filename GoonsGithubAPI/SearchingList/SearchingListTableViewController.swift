@@ -17,7 +17,6 @@ final class SearchingListTableViewController: UITableViewController {
         var results: [Items]
         var imageModel: [ImageModel]
         var searchingUrl: URL?
-//        var newLoadImage: ImageModel
     }
     
     var state = State(results: [], imageModel: [], searchingUrl: nil) {
@@ -37,13 +36,6 @@ final class SearchingListTableViewController: UITableViewController {
                     self.fetchResults(url: url)
                 }
             }
-//            if oldValue.newLoadImage != state.newLoadImage {
-//                DispatchQueue.main.async {
-//                    let row = self.state.newLoadImage.id
-//                    print("刷新row: \(row)")
-//                    self.tableView.reloadRows(at: [IndexPath(row: row, section: 0)], with: .none)
-//                }
-//            }
         }
     }
     
@@ -64,7 +56,6 @@ final class SearchingListTableViewController: UITableViewController {
     
     /// 取得資料
     func fetchResults(url: URL) {
-        print("API網址-f：\(url)")
         viewModel.fetchResults(at: url) { [weak self] results in
             switch results {
             case .success(let items):
@@ -87,7 +78,6 @@ final class SearchingListTableViewController: UITableViewController {
             }
             return
         }
-        print("下拉更新")
         fetchResults(url: url)
     }
     
@@ -188,7 +178,7 @@ extension SearchingListTableViewController: UISearchBarDelegate {
 }
 
 
-// MARK: Scroll View
+// MARK: NavigationBar Change
 
 extension SearchingListTableViewController {
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
