@@ -140,6 +140,18 @@ final class SearchingListTableViewController: UITableViewController {
 
         return cell
     }
+    
+    /// 選擇的Row，轉換頁面，傳資料
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Detailed", bundle: nil)
+        if let detailedViewController = storyboard.instantiateViewController(identifier: "DetailedViewController") as? DetailedViewController {
+            detailedViewController.detailedState = DetailedViewController.DetailState(
+                results: self.state.results[indexPath.row],
+                imageModel: self.state.imageModel[indexPath.row]
+            )
+            navigationController?.pushViewController(detailedViewController, animated: true)
+        }
+    }
 }
 
 // MARK: - Searching
