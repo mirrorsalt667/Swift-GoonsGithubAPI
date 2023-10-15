@@ -10,6 +10,7 @@ import UIKit
 final class SearchingListTableViewController: UITableViewController {
     
     var viewModel = SearchingListViewModel()
+    let urlHeaderString = "https://api.github.com/search/repositories"
     
     struct State {
         var results: [Items]
@@ -46,7 +47,13 @@ final class SearchingListTableViewController: UITableViewController {
         self.title = "Repositories"
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        viewModel.fetchResults(at: URL(string: "https://api.github.com/search/repositories?q=pink%20apple")!) { [weak self] results in
+    }
+    
+    // MARK: - Methods
+    
+    func fetchResults(url: URL) {
+        print("API網址：\(url)")
+        viewModel.fetchResults(at: url) { [weak self] results in
             switch results {
             case .success(let items):
                 self?.state.results = items
@@ -91,5 +98,35 @@ final class SearchingListTableViewController: UITableViewController {
         cell.descriptionLabel.text = state.results[row].description ?? ""
 
         return cell
+    }
+}
+
+// MARK: - Searching
+
+extension SearchingListTableViewController: UISearchBarDelegate {
+    
+    /// 鍵盤按下搜尋
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("-> saerchBtnClick <-")
+        self.view.endEditing(true)
+        guard let text = searchBar.text,
+              var urlComps = URLComponents(string: urlHeaderString)
+        else { return }
+        urlComps.queryItems = [URLQueryItem(name: "q", value: text)]
+        
+        guard let url = urlComps.url else { return }
+        self.fetchResults(url: url)
+    }
+    
+    /// 被清空時，清空table view
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            self.state.results = []
+        }
+    }
+    
+    /// 取消按鈕
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        print("-> cancelBtnClick <-")
     }
 }

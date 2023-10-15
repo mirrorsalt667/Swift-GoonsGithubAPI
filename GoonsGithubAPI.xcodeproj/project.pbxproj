@@ -53,10 +53,10 @@
 			isa = PBXGroup;
 			children = (
 				C7E550812ADA379E0006F883 /* AppDelegate.swift */,
-				C7E550832ADA379E0006F883 /* SceneDelegate.swift */,
-				C7E5508C2ADA379F0006F883 /* LaunchScreen.storyboard */,
 				C7E5508A2ADA379F0006F883 /* Assets.xcassets */,
 				C7E5508F2ADA379F0006F883 /* Info.plist */,
+				C7E5508C2ADA379F0006F883 /* LaunchScreen.storyboard */,
+				C7E550832ADA379E0006F883 /* SceneDelegate.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -64,9 +64,9 @@
 		C7D3F12A2ADAC70E004C0928 /* SearchingList */ = {
 			isa = PBXGroup;
 			children = (
-				C7D3F12B2ADAC765004C0928 /* SearchingListTableViewController.swift */,
 				C7D3F12D2ADAC77D004C0928 /* SearchingList.storyboard */,
 				C7D3F1372ADACC28004C0928 /* SearchingListTableViewCell.swift */,
+				C7D3F12B2ADAC765004C0928 /* SearchingListTableViewController.swift */,
 				C7D3F13B2ADAF0A0004C0928 /* SearchingListViewModel.swift */,
 			);
 			path = SearchingList;
@@ -75,8 +75,8 @@
 		C7D3F12F2ADAC7BB004C0928 /* DetailedPage */ = {
 			isa = PBXGroup;
 			children = (
-				C7D3F1302ADAC842004C0928 /* DetailedViewController.swift */,
 				C7D3F1322ADAC851004C0928 /* Detailed.storyboard */,
+				C7D3F1302ADAC842004C0928 /* DetailedViewController.swift */,
 			);
 			path = DetailedPage;
 			sourceTree = "<group>";
@@ -84,8 +84,8 @@
 		C7D3F1342ADAC876004C0928 /* SourceFetcher */ = {
 			isa = PBXGroup;
 			children = (
-				C7D3F1352ADAC8AC004C0928 /* SourceFetcher.swift */,
 				C7D3F1392ADAD1F5004C0928 /* DataModel.swift */,
+				C7D3F1352ADAC8AC004C0928 /* SourceFetcher.swift */,
 			);
 			path = SourceFetcher;
 			sourceTree = "<group>";
@@ -109,9 +109,9 @@
 		C7E550802ADA379E0006F883 /* GoonsGithubAPI */ = {
 			isa = PBXGroup;
 			children = (
-				C7D3F1342ADAC876004C0928 /* SourceFetcher */,
 				C7D3F12F2ADAC7BB004C0928 /* DetailedPage */,
 				C7D3F12A2ADAC70E004C0928 /* SearchingList */,
+				C7D3F1342ADAC876004C0928 /* SourceFetcher */,
 				C7D3F1292ADAC6B1004C0928 /* SupportingFiles */,
 			);
 			path = GoonsGithubAPI;
