@@ -27,3 +27,8 @@ struct Items: Decodable, Equatable {
 struct Owner: Decodable, Equatable {
     let avatar_url: String
 }
+
+struct ImageModel: Equatable {
+    let id: Int
+    let imageData: Data
+}

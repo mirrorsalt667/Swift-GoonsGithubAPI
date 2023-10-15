@@ -26,33 +26,33 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchingListTableViewCell" id="9Ga-1b-RIo" customClass="SearchingListTableViewCell" customModule="GoonsGithubAPI" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="94" width="393" height="83.333335876464844"/>
+                                <rect key="frame" x="0.0" y="94" width="393" height="84"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Ga-1b-RIo" id="13y-3C-A8i">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="83.333335876464844"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MAr-Q8-Suy">
-                                            <rect key="frame" x="25" y="14.000000000000004" width="343" height="55.333333333333343"/>
+                                            <rect key="frame" x="25" y="14" width="343" height="56"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AeJ-OZ-Wbl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="55.333333333333336"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="56"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="CMs-p3-fwK"/>
-                                                        <constraint firstAttribute="width" constant="50" id="jxb-72-Ocu"/>
+                                                        <constraint firstAttribute="height" constant="70" id="CMs-p3-fwK"/>
+                                                        <constraint firstAttribute="width" constant="70" id="jxb-72-Ocu"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XkM-bs-LnI">
-                                                    <rect key="frame" x="70" y="0.0" width="273" height="55.333333333333336"/>
+                                                    <rect key="frame" x="90" y="0.0" width="253" height="56"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjL-vm-Fmp">
-                                                            <rect key="frame" x="0.0" y="0.0" width="273" height="33"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="253" height="33.666666666666664"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tAL-5z-Z02">
-                                                            <rect key="frame" x="0.0" y="38" width="48" height="17"/>
+                                                            <rect key="frame" x="0.0" y="38.666666666666664" width="48" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
